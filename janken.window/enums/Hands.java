@@ -1,4 +1,6 @@
-import janken.window.enums;
+package janken.window.enums;
+
+import java.util.*;
 
 public enum Hands{
     //グー
@@ -23,7 +25,7 @@ public enum Hands{
     
     //相手のランダムなて
     public static Hands getRandomHands(){
-        Ramdom rand = new Random();
+        Random rand = new Random();
         return Hands.values()[rand.nextInt(3)];
     }
 

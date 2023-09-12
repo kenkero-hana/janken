@@ -1,4 +1,4 @@
-import janken.window.enums;
+package janken.window.enums;
 
 public enum Status{
     //待ち時間

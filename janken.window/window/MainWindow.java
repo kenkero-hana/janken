@@ -1,3 +1,5 @@
+package janken.window;
+
 import janken.window.enums.Hands;
 import janken.window.enums.Status;
 
@@ -94,14 +96,25 @@ public class MainWindow{
             return;
         }
 
-        // //勝ち負けの判定
-        // switch((selected.getNumber() - opponentHand.getNumber() + 3) % 3){
-        //     case 0:
-        //         // 引き分けなので継続
-        //         this.messageLabel.setText("あーいこーで・・・");
-        //         // 手を出し直す
-        //         this.init();
-        //         break;
-        // }
+        //勝ち負けの判定
+        switch((selected.getNumber() - opponentHand.getNumber() + 3) % 3){
+            case 0:
+                // 引き分けなので継続
+                this.messageLabel.setText("あーいこーで・・・");
+                // 手を出し直す
+                this.init();
+                break;
+            case 1:
+                // 負け
+                this.messageLabel.setText(String.format(""));
+                // ゲーム終了
+                this.playState = Status.Done;
+                break;
+            case 2:
+                this.messageLabel.setText(String.format(""));
+                // ゲーム終了
+                this.playState = Status.Done;
+                break;
+        }
     }
 }

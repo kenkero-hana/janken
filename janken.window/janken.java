@@ -8,6 +8,8 @@
     ・じゃんけんの手
     ・勝ち負け*/
 
+package janken.window;
+
 import janken.window.MainWindow;
 
 public class janken{
